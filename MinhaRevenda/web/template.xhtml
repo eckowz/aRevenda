@@ -26,25 +26,28 @@
                 <ui:insert name="left">
                     <div id='cssmenu'>
                         <ul>
-                            <li><a href="index.xhtml"><span>Home</span></a></li>
-                            <li class='active has-sub'><a href='#'><span>Cadastros</span></a>
+                            <li>
+                                <h:link outcome="index"><span>Home</span></h:link> 
+                            </li>
+
+                            <li class='active has-sub'><h:link outcome="index"><span>Cadastros</span></h:link>
                                 <ul>
-                                    <li class='has-sub'><a href='#'><span>Estabelecimento</span></a>
+                                    <li class='has-sub'><h:link outcome="index"><span>Estabelecimento</span></h:link>
                                         <ul>
-                                            <li><a href='#'><span>Cliente</span></a></li>
-<!--                                            <li class='last'><a href='#'><span>Sub Product</span></a></li>-->
+                                            <li><h:link outcome="index"><span>Cliente</span></h:link></li>
+                                            <!--<li class='last'><h:link outcome="index"><span>Sub Product</span></h:link></li>-->
                                         </ul>
                                     </li>
-                                    <li class='has-sub'><a href='#'><span>Sistema</span></a>
+                                    <li class='has-sub'><h:link outcome="index"><span>Sistema</span></h:link>
                                         <ul>
-                                            <li><a href='#'><span>Funcionario</span></a></li>
-<!--                                            <li class='last'><a href='#'><span>Sub Product</span></a></li>-->
+                                            <li><h:link outcome="index"><span>Funcionario</span></h:link></li>
+                                            <!--<li class='last'><h:link outcome="index"><span>Sub Product</span></h:link></li>-->
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href='#'><span>Sobre</span></a></li>
-                            <li class='last'><a href='#'><span>Contato</span></a></li>
+                            <li><h:link outcome="index"><span>Sobre</span></h:link></li>
+                            <li class='last'><h:link outcome="index"><span>Contato</span></h:link></li>
                         </ul>
                     </div>
                 </ui:insert>
