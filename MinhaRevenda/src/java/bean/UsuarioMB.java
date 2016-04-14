@@ -56,7 +56,7 @@ public class UsuarioMB implements Serializable{
     }
 
     public String atualizarUsuario() {
-        return ("/admin/index?faces-redirect=true");
+        return ("/admin/formUsuario?faces-redirect=true");
     }
 
     public void removerUsuario(Usuario usuario) {

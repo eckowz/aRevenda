@@ -29,8 +29,8 @@
                         <h:selectOneMenu id="idEstado" value="#{usuarioMB.usuarioSelecionado.estado}">
                             <f:selectItem itemLabel="Rio Grande do Sul" itemValue="RS" />
                             <f:selectItem itemLabel="Santa Catarina" itemValue="SC" />
-                            <f:selectItem itemLabel="Paran�" itemValue="PR" />
-                            <f:selectItem itemLabel="S�o Paulo" itemValue="SP" />
+                            <f:selectItem itemLabel="Paraná" itemValue="PR" />
+                            <f:selectItem itemLabel="São Paulo" itemValue="SP" />
                             <f:selectItem itemLabel="Rio de Janeiro" itemValue="RJ" />
                         </h:selectOneMenu>
 
@@ -40,11 +40,11 @@
                         <h:outputLabel for="idSenha" value="Senha"/>
                         <h:inputSecret id="idSenha" value="#{usuarioMB.usuarioSelecionado.senha}" />
 
-                        <h:outputLabel for="idAdmin" value="� admin"/>
+                        <h:outputLabel for="idAdmin" value="É admin"/>
                         <h:selectBooleanCheckbox value="#{usuarioMB.usuarioSelecionado.admin}" />
 
                         <h:commandButton value="Cadastrar" action="#{usuarioMB.addUsuarios()}"/>
-                        <h:button value="Voltar" outcome="/admin/index"/>
+                        <h:button value="Voltar" outcome="formUsuario"/>
                     </h:panelGrid>
                 </h:form>
             </ui:define>
