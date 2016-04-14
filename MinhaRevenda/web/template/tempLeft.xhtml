@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+
+    <h:body>
+        <ui:composition>
+            <div id='cssmenu'>
+                <ul>
+                    <li>
+                        <h:link outcome="/index"><span>Home</span></h:link> 
+                    </li>
+
+                    <li class='active has-sub'><h:link outcome="/index"><span>Cadastros</span></h:link>
+                        <ul>
+                            <li class='has-sub'><h:link outcome="/index"><span>Estabelecimento</span></h:link>
+                                <ul>
+                                    <li><h:link outcome="/index"><span>Cliente</span></h:link></li>
+                                    <!--<li class='last'><h:link outcome="index"><span>Sub Product</span></h:link></li>-->
+                                </ul>
+                            </li>
+                            <li class='has-sub'><h:link outcome="/index"><span>Sistema</span></h:link>
+                                <ul>
+                                    <li><h:link outcome="/admin/formUsuario"><span>Funcionario</span></h:link></li>
+                                    <!--<li class='last'><h:link outcome="index"><span>Sub Product</span></h:link></li>-->
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><h:link outcome="/index"><span>Sobre</span></h:link></li>
+                    <li class='last'><h:link outcome="/index"><span>Contato</span></h:link></li>
+                </ul>
+            </div>
+        </ui:composition>
+    </h:body>
+
+</html>

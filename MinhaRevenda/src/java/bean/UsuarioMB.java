@@ -1,16 +1,17 @@
 package bean;
 
+import java.io.Serializable;
 import model.Usuario;
 import java.util.ArrayList;
 import java.util.List;
-import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ManagedBean;
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 
 
 
-@ManagedBean(eager = true)
-@ApplicationScoped //Application, pois os usu�rios cadastrados dever�o permanecer mesmo se fizer logout.
-public class UsuarioMB {
+@Named
+@ApplicationScoped
+public class UsuarioMB implements Serializable{
 
     //CRUD
     private List<Usuario> listaUsuarios;
