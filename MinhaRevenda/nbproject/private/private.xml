@@ -4,6 +4,9 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/gserafini/aRevenda/MinhaRevenda/src/java/bean/UsuarioMB.java</file>
+            <file>file:/C:/Users/gserafini/aRevenda/MinhaRevenda/web/admin/formEdicaoUsuario.xhtml</file>
+            <file>file:/C:/Users/gserafini/aRevenda/MinhaRevenda/web/admin/formCadastroUsuario.xhtml</file>
+            <file>file:/C:/Users/gserafini/aRevenda/MinhaRevenda/web/admin/formUsuario.xhtml</file>
         </group>
     </open-files>
 </project-private>
