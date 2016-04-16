@@ -195,11 +195,11 @@ public class MarcaMB implements Serializable {
         listaMarcas.add(new Marca(43, "Nissan"));
         listaMarcas.add(new Marca(44, "Peugeot"));
     }
-    
-    public Marca getMarcaSelecionada(){
+
+    public Marca getMarcaSelecionada() {
         return marcaSelecionada;
     }
-    
+
     public void setMarcaSelecionado(Marca marcaSelecionada) {
         this.marcaSelecionada = marcaSelecionada;
     }
@@ -233,6 +233,15 @@ public class MarcaMB implements Serializable {
 
     public void removerMarca(Marca marca) {
         listaMarcas.remove(marca);
+    }
+
+    public Marca buscarMarca(int codMarca) {
+        for (Marca marca : listaMarcas) {
+            if (marca.getCodigo() == (codMarca)) {
+                return marca;
+            }
+        }
+        return null;
     }
 
 }
