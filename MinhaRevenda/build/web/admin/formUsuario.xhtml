@@ -9,7 +9,8 @@
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
                 <h:form>
-                    <h:dataTable var="usuario" value="#{usuarioMB.listaUsuarios}" border="1">
+                    <h:dataTable styleClass="tabela" headerClass="cabecalho" 
+                                 columnClasses="ultimo,primeiro" var="usuario" value="#{usuarioMB.listaUsuarios}">
                         <f:facet name="header">
                             <h:outputText value="Tabela de Usuários" />
                         </f:facet>
@@ -65,8 +66,8 @@
                             <h:commandLink value="Remover" action="#{usuarioMB.removerUsuario(usuario)}"/>
                         </h:column>
                     </h:dataTable>
-                    <h:commandButton value="Novo Usuario" action="#{usuarioMB.novoUsuario()}"/>
-                    <h:button value="Voltar" outcome="/index"/>
+                    <h:commandButton class="button" value="Novo Usuario" action="#{usuarioMB.novoUsuario()}"/>
+                    <h:button class="button" value="Voltar" outcome="/index"/>
                 </h:form>
             </ui:define>
         </ui:composition>

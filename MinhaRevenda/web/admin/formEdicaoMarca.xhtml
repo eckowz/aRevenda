@@ -16,8 +16,8 @@
                         <h:outputLabel for="idMarca" value="Marca"/>
                         <h:inputText id="idMarca" value="#{marcaMB.marcaSelecionada.marca}" />
 
-                        <h:commandButton value="Editar" action="#{marcaMB.atualizarMarca()}"/>
-                        <h:button value="Voltar" outcome="formMarca"/>
+                        <h:commandButton class="button" value="Editar" action="#{marcaMB.atualizarMarca()}"/>
+                        <h:button class="button" value="Voltar" outcome="formMarca"/>
                     </h:panelGrid>
                 </h:form>
             </ui:define>

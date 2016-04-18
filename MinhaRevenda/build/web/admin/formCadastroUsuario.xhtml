@@ -43,8 +43,8 @@
                         <h:outputLabel for="idAdmin" value="É admin"/>
                         <h:selectBooleanCheckbox value="#{usuarioMB.usuarioSelecionado.admin}" />
 
-                        <h:commandButton value="Cadastrar" action="#{usuarioMB.addUsuarios()}"/>
-                        <h:button value="Voltar" outcome="formUsuario"/>
+                        <h:commandButton class="button" value="Cadastrar" action="#{usuarioMB.addUsuarios()}"/>
+                        <h:button class="button" value="Voltar" outcome="formUsuario"/>
                     </h:panelGrid>
                 </h:form>
             </ui:define>

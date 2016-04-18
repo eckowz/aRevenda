@@ -9,7 +9,8 @@
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
                 <h:form>
-                    <h:dataTable var="marca" value="#{marcaMB.listaMarcas}" border="1">
+                    <h:dataTable styleClass="tabela" headerClass="cabecalho" 
+                                 columnClasses="ultimo,primeiro" var="marca" value="#{marcaMB.listaMarcas}">
                         <f:facet name="header">
                             <h:outputText value="Tabela de Marcas" />
                         </f:facet>
@@ -35,8 +36,8 @@
                             <h:commandLink value="Remover" action="#{marcaMB.removerMarca(marca)}"/>
                         </h:column>
                     </h:dataTable>
-                    <h:commandButton value="Nova Marca" action="#{marcaMB.novaMarca()}"/>
-                    <h:button value="Voltar" outcome="/index"/>
+                    <h:commandButton class="button" value="Nova Marca" action="#{marcaMB.novaMarca()}"/>
+                    <h:button class="button" value="Voltar" outcome="/index"/>
                 </h:form>
             </ui:define>
         </ui:composition>
