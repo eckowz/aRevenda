@@ -5,25 +5,28 @@
  */
 package model;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author gserafini
  */
-public class Modelo {
+public class Modelo implements BaseEntity, Serializable {
+
+    private static final long serialVersionUID = 1L;
     private int codigo;
     private String modelo;
     private Marca marca;
-    
-    public Modelo(int codigo, String modelo, Marca marca){
+
+    public Modelo(int codigo, String modelo, Marca marca) {
         this.codigo = codigo;
         this.modelo = modelo;
         this.marca = marca;
     }
-    
-    public Modelo(){
-        
+
+    public Modelo() {
+
     }
 
     public int getCodigo() {
@@ -59,6 +62,10 @@ public class Modelo {
         return hash;
     }
 
+    public Long getId() {
+        return new Long(codigo);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -82,6 +89,11 @@ public class Modelo {
         }
         return true;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Modelo{" + "codigo=" + codigo + ", modelo=" + modelo + ", marca=" + marca + '}';
+    }
+
     
 }
