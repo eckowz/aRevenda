@@ -6,6 +6,7 @@ body {
     margin: 10px;
 }
 
+/*
 h1 {
     font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
     border-bottom: 1px solid #AFAFAF; 
@@ -14,12 +15,44 @@ h1 {
     margin: 0px;
     padding: 0px;
     color: #D20005;
+}*/
+
+h1 { 
+    color: #aec3e5; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 24px; 
+    font-weight: 800; 
+    line-height: 72px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+    text-transform: uppercase; 
+}
+
+h2 { 
+    color: #7089b3; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 16px; 
+    font-weight: 800; 
+    line-height: 36px; 
+    margin: 0 0 24px; 
+    text-align: center; 
+}
+
+p { 
+    color: #045491; 
+    font-family: 'Raleway',sans-serif; 
+    font-size: 12px; 
+    font-weight: 500; 
+    line-height: 32px; 
+    margin: 0 0 24px; /* cria um espaçamento entre o elemento anterior e esse*/
+    text-align: justify;
+    padding: 0px 30px 24px 80px; /* o primeiro 0px é porque o margin já cria este espaçamento*/
 }
 
 a:link, a:visited {
     color: #045491;
     font-weight : bold;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a:link:hover, a:visited:hover  {
