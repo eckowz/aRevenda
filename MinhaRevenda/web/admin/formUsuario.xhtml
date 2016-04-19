@@ -61,9 +61,9 @@
                             <f:facet name="header">
                                 <h:outputText value="Operação" />
                             </f:facet>
-                            <h:commandLink value="Editar " action="#{usuarioMB.editarUsuario(usuario)}"/>
+                            <h:commandLink class="operacao" value="Editar " action="#{usuarioMB.editarUsuario(usuario)}"/>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <h:commandLink value="Remover" action="#{usuarioMB.removerUsuario(usuario)}"/>
+                            <h:commandLink class="operacao" value="Remover" action="#{usuarioMB.removerUsuario(usuario)}"/>
                         </h:column>
                     </h:dataTable>
                     <h:commandButton class="button" value="Novo Usuario" action="#{usuarioMB.novoUsuario()}"/>

@@ -31,9 +31,9 @@
                             <f:facet name="header">
                                 <h:outputText value="Operação" />
                             </f:facet>
-                            <h:commandLink value="Editar " action="#{marcaMB.editarMarca(marca)}"/>
+                            <h:commandLink class="operacao" value="Editar " action="#{marcaMB.editarMarca(marca)}"/>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <h:commandLink value="Remover" action="#{marcaMB.removerMarca(marca)}"/>
+                            <h:commandLink class="operacao" value="Remover" action="#{marcaMB.removerMarca(marca)}"/>
                         </h:column>
                     </h:dataTable>
                     <h:commandButton class="button" value="Nova Marca" action="#{marcaMB.novaMarca()}"/>
