@@ -8,8 +8,9 @@
     <h:body>
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
-                <h:form>
-                    <h:panelGrid columns="2" >
+                <h:form class="bootstrap-frm">
+                    <h1>Cadastro de Funcionarios</h1>
+                    <h:panelGrid columns="2" class="panelGrid">
                         <h:outputLabel for="idNome" value="Nome:"/>
                         <h:inputText id="idNome" value="#{usuarioMB.usuarioSelecionado.nome}"  />
 
@@ -20,8 +21,8 @@
                         <h:inputText id="idEmail" value="#{usuarioMB.usuarioSelecionado.email}" />
 
                         <h:outputLabel for="idSexo" value="Sexo:" />
-                        <h:selectOneRadio id="idSexo" value="#{usuarioMB.usuarioSelecionado.sexo}">
-                            <f:selectItem itemLabel="Masculino" itemValue="1" />
+                        <h:selectOneRadio id="idSexo" value="#{usuarioMB.usuarioSelecionado.sexo}" >
+                            <f:selectItem itemLabel="Masculino" itemValue="1" itemDisabled="false"/>
                             <f:selectItem itemLabel="Feminino" itemValue="2" />
                         </h:selectOneRadio>
 
