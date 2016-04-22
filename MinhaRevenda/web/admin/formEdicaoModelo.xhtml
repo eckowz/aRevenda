@@ -8,12 +8,12 @@
     <h:body>
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
-                <h:form>
-                    <h:panelGrid columns="2" >
-                        <h:outputLabel for="idCodigo" value="Codigo:"/>
+                <h:form class="bootstrap-frm">
+                    <h:panelGrid columns="2" class="panelGrid" columnClasses="coluna1, coluna2">
+                        <h:outputLabel for="idCodigo" value="Codigo: "/>
                         <h:inputText readonly="true" id="idCodigo" value="#{modeloMB.modeloSelecionado.codigo}"  />
 
-                        <h:outputLabel for="idMarca" value="Marca:"/>
+                        <h:outputLabel for="idMarca" value="Marca: "/>
                         <h:selectOneMenu id="idMarca" value="#{modeloMB.modeloSelecionado.marca}" 
                                          required="true" converter="generic"
                                          requiredMessage="Campo é obrigatório">
@@ -21,7 +21,7 @@
                             <f:selectItems var="m" value="#{marcaMB.listaMarcas}"  itemLabel="#{m.marca}"/>
                         </h:selectOneMenu>
 
-                        <h:outputLabel for="idModelo" value="Modelo:"/>
+                        <h:outputLabel for="idModelo" value="Modelo: "/>
                         <h:inputText id="idModelo" value="#{modeloMB.modeloSelecionado.modelo}" />
 
                         <h:commandButton class="button" value="Editar" action="#{modeloMB.atualizarModelo()}"/>

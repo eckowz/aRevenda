@@ -8,9 +8,9 @@
     <h:body>
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
-                <h:form>
+                <h:form class="bootstrap-frm">
                     <h:dataTable styleClass="tabela" headerClass="cabecalho" 
-                                 columnClasses="ultimo,primeiro" var="usuario" value="#{usuarioMB.listaUsuarios}">
+                                 rowClasses="primeiro, ultimo" var="usuario" value="#{usuarioMB.listaUsuarios}">
                         <f:facet name="header">
                             <h:outputText value="Tabela de Usuários" />
                         </f:facet>

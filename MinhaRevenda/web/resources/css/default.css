@@ -80,10 +80,10 @@ a.operacao:hover {
     color: #ffffff;
 
 }
-
+/*
 .button{
     float: center; 
-    /*margin-left:15px;     */
+    margin-left:15px;     
     margin:10px 55px 10px 0;     
     font-weight: bold;     
     line-height: 1;     
@@ -92,21 +92,21 @@ a.operacao:hover {
     color: #fff;       
     text-align: center;     
     text-shadow: 0 -1px 1px #64799e;      
-    /* Background gradient */     
+     Background gradient      
     background: #a5b8da;     
     background: -moz-linear-gradient        (top, #a5b8da 0%, #7089b3 100%);     
     background: -webkit-gradient        (linear, 0% 0%, 0% 100%,        
         from(#a5b8da), to(#7089b3));       
-    /* Border style */     
+     Border style      
     border: 1px solid #5c6f91;     
     -moz-border-radius: 10px;     
     -webkit-border-radius: 10px;     
     border-radius: 10px;       
-    /* Box shadow */     
+     Box shadow      
     -moz-box-shadow: inset 0 1px 0 0 #aec3e5;     
     -webkit-box-shadow: inset 0 1px 0 0 #aec3e5;     
     box-shadow: inset 0 1px 0 0 #aec3e5;       
-}
+}*/
 
 
 /* Estilo para os datatables */
@@ -116,6 +116,14 @@ a.operacao:hover {
     /*column-width: 800px;*/
     min-width: 700px;
 
+}
+
+.primeiro{
+
+}
+
+.ultimo{
+    background-color: #DDD;
 }
 
 .cabecalho{
@@ -146,7 +154,6 @@ a.operacao:hover {
 .bootstrap-frm {
     margin-left:auto;
     margin-right:auto;
-
     max-width: 1024px;
     background: #FFF;
     padding: 20px 30px 20px 30px;
@@ -160,8 +167,18 @@ a.operacao:hover {
 }
 
 .panelGrid{
-    width: 400px;
+    width: 70%;
 }
+
+.coluna1{
+    width: 20%;
+    text-align: right;
+}
+
+.coluna2{
+    width: 78%;
+}
+
 .bootstrap-frm h1 {
     font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 0px 0px 10px 40px;
@@ -175,7 +192,6 @@ a.operacao:hover {
     font-size: 11px;
 }
 .bootstrap-frm label {
-    display: block;
     margin: 0px 0px 5px;
 }
 .bootstrap-frm label>span {
@@ -188,7 +204,9 @@ a.operacao:hover {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
-.bootstrap-frm input[type="text"], .bootstrap-frm input[type="email"], .bootstrap-frm textarea, .bootstrap-frm select{
+
+
+.bootstrap-frm input[type="text"], .bootstrap-frm input[type="email"], .bootstrap-frm textarea, .bootstrap-frm select {
     border: 1px solid #CCC;
     color: #888;
     height: 20px;
@@ -206,9 +224,10 @@ a.operacao:hover {
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-.bootstrap-frm select {
-    background: #FFF url('down-arrow.png') no-repeat right;
-    background: #FFF url('down-arrow.png') no-repeat right;
+
+.bootstrap-frm select  {
+    background: #FFF url("../resources/Imagens/down-arrow.png") no-repeat right;
+/*    background-image: url("/resources/Imagens/down-arrow.png") ;*/
     appearance:none;
     -webkit-appearance:none; 
     -moz-appearance: none;
@@ -223,14 +242,14 @@ a.operacao:hover {
     padding: 5px 0px 0px 5px;
     width: 70%;
 }
-.bootstrap-frm .button {
+.button {
     background: #FFF;
     border: 1px solid #CCC;
     padding: 10px 25px 10px 25px;
     color: #333;
     border-radius: 4px;
 }
-.bootstrap-frm .button:hover {
+.button:hover {
     color: #333;
     background-color: #EBEBEB;
     border-color: #ADADAD;

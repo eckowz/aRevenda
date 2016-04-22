@@ -8,12 +8,12 @@
     <h:body>
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
-                <h:form>
-                    <h:panelGrid columns="2" >
-                        <h:outputLabel for="idCodigo" value="Código:"/>
+                <h:form class="bootstrap-frm">
+                    <h:panelGrid columns="2" class="panelGrid" columnClasses="coluna1, coluna2">
+                        <h:outputLabel for="idCodigo" value="Código: "/>
                         <h:inputText readonly="true" id="idCodigo" value="#{marcaMB.marcaSelecionada.codigo}"  />
 
-                        <h:outputLabel for="idMarca" value="Marca"/>
+                        <h:outputLabel for="idMarca" value="Marca: "/>
                         <h:inputText id="idMarca" value="#{marcaMB.marcaSelecionada.marca}" />
 
                         <h:commandButton class="button" value="Editar" action="#{marcaMB.atualizarMarca()}"/>

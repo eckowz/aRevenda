@@ -8,24 +8,24 @@
     <h:body>
         <ui:composition template="/template/template.xhtml">
             <ui:define name="content">
-                <h:form>
-                    <h:panelGrid columns="2" >
-                        <h:outputLabel for="idNome" value="Nome:"/>
+                <h:form class="bootstrap-frm">
+                    <h:panelGrid columns="2" class="panelGrid" columnClasses="coluna1, coluna2">
+                        <h:outputLabel for="idNome" value="Nome: "/>
                         <h:inputText readonly="true" id="idNome" value="#{usuarioMB.usuarioSelecionado.nome}"  />
 
-                        <h:outputLabel for="idTelefone" value="Telefone:"/>
+                        <h:outputLabel for="idTelefone" value="Telefone: "/>
                         <h:inputText id="idTelefone" value="#{usuarioMB.usuarioSelecionado.telefone}" />
 
-                        <h:outputLabel for="idEmail" value="Email:"/>
+                        <h:outputLabel for="idEmail" value="Email: "/>
                         <h:inputText id="idEmail" value="#{usuarioMB.usuarioSelecionado.email}" />
 
-                        <h:outputLabel for="idSexo" value="Sexo:" />
+                        <h:outputLabel for="idSexo" value="Sexo: " />
                         <h:selectOneRadio id="idSexo" value="#{usuarioMB.usuarioSelecionado.sexo}">
                             <f:selectItem itemLabel="Masculino" itemValue="1" />
                             <f:selectItem itemLabel="Feminino" itemValue="2" />
                         </h:selectOneRadio>
 
-                        <h:outputLabel for="idEstado" value="Estado:" />
+                        <h:outputLabel for="idEstado" value="Estado: " />
                         <h:selectOneMenu id="idEstado" value="#{usuarioMB.usuarioSelecionado.estado}">
                             <f:selectItem itemLabel="Rio Grande do Sul" itemValue="RS" />
                             <f:selectItem itemLabel="Santa Catarina" itemValue="SC" />
@@ -34,13 +34,13 @@
                             <f:selectItem itemLabel="Rio de Janeiro" itemValue="RJ" />
                         </h:selectOneMenu>
 
-                        <h:outputLabel for="idLogin" value="Login:"/>
+                        <h:outputLabel for="idLogin" value="Login: "/>
                         <h:inputText id="idLogin" value="#{usuarioMB.usuarioSelecionado.login}" />
 
-                        <h:outputLabel for="idSenha" value="Senha"/>
+                        <h:outputLabel for="idSenha" value="Senha: "/>
                         <h:inputSecret id="idSenha" value="#{usuarioMB.usuarioSelecionado.senha}" />
 
-                        <h:outputLabel for="idAdmin" value="É admin"/>
+                        <h:outputLabel for="idAdmin" value="É admin? "/>
                         <h:selectBooleanCheckbox value="#{usuarioMB.usuarioSelecionado.admin}" />
 
                         <h:commandButton class="button" value="Editar" action="#{usuarioMB.atualizarUsuario()}"/>
