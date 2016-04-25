@@ -9,8 +9,6 @@
  */
 package model;
 
-import java.util.Objects;
-
 public class Usuario {
 
     public final static int MASCULINO = 1;
@@ -27,22 +25,34 @@ public class Usuario {
     public Usuario() {
     }
 
-    public Usuario(String login, String senha) {
-        this.nome = login;
-        this.login = login;
-        this.senha = senha;
-        this.admin = true;
-        this.sexo = 1;
-        this.estado = "RS";
-    }
-
+//    public Usuario(String login, String senha) {
+//        this.nome = login;
+//        this.login = login;
+//        this.senha = senha;
+//        this.admin = true;
+//        this.sexo = 1;
+//        this.estado = "RS";
+//    }
     public Usuario(String login, String senha, boolean admin) {
-        this.nome = login;
         this.login = login;
         this.senha = senha;
         this.admin = admin;
-        this.sexo = 1;
-        this.estado = "RS";
+    }
+
+    public Usuario(String nome, String telefone, String email, String login, String senha, int sexo, String estado, boolean admin) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.login = login;
+        this.senha = senha;
+        this.sexo = sexo;
+        this.estado = estado;
+        this.admin = admin;
+    }
+
+    public Usuario(String login, String senha) {
+        this.login = login;
+        this.senha = senha;
     }
 
     public String getNome() {
@@ -125,38 +135,8 @@ public class Usuario {
         this.admin = admin;
     }
 
-//    public boolean verificaLogin(String login, String senha) {
-//        return (this.login.equals(login) && this.senha.equals(senha));
-//    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.login, other.login)) {
-            return false;
-        }
-        if (!Objects.equals(this.senha, other.senha)) {
-            return false;
-        }
-        return true;
+    public boolean verificaLogin(String login, String senha) {
+        return (this.login.equals(login) && this.senha.equals(senha));
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 11 * hash + Objects.hashCode(this.login);
-        hash = 11 * hash + Objects.hashCode(this.senha);
-        return hash;
-    }
-    
-    
 }

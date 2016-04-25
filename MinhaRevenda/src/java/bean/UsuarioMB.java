@@ -3,26 +3,23 @@ package bean;
 import java.util.ArrayList;
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
-import javax.faces.application.FacesMessage;
-import javax.faces.context.FacesContext;
-import javax.inject.Named;
+import javax.faces.bean.ManagedBean;
 import model.Usuario;
 
-@Named
 @ApplicationScoped
+@ManagedBean(eager = true)
 public class UsuarioMB {
 
     //CRUD
     private List<Usuario> listaUsuarios;
-    private Usuario usuarioSelecionado, usuario;
+    private Usuario usuarioSelecionado;
 
     public UsuarioMB() {
         usuarioSelecionado = new Usuario();
         listaUsuarios = new ArrayList<Usuario>();
-        listaUsuarios.add(new Usuario("admin", "admin"));
+        listaUsuarios.add(new Usuario("admin", "admin", true));
         listaUsuarios.add(new Usuario("Fulano", "123", false));
-        
-        usuario = new Usuario();
+
     }
 
     public Usuario getUsuarioSelecionado() {
@@ -64,23 +61,4 @@ public class UsuarioMB {
         listaUsuarios.remove(usuario);
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public String verificaLogin() {
-        if (listaUsuarios.contains(usuario)) {
-            return ("/admin/formUsuario.xhtml");
-        } else {
-            FacesContext contexto = FacesContext.getCurrentInstance();
-            FacesMessage mensagem = new FacesMessage(FacesMessage.SEVERITY_ERROR,
-                    "Login inválido!", "Usuário ou senha estão errados!");
-            contexto.addMessage("idMensagem", mensagem);
-            return ("login");
-        }
-    }
 }

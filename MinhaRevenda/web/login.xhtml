@@ -12,10 +12,10 @@
                 <h:form class="bootstrap-frm">
                     <h:panelGrid columns="2" class="panelGrid" columnClasses="coluna1, coluna2" >
                         <h:outputLabel value="Usuario: " for="idUsuario"/>
-                        <h:inputText value="#{usuarioMB.usuario.login}" id="idUsuario"/>
+                        <h:inputText value="#{loginMB.login}" id="idUsuario"/>
                         <h:outputLabel value="Senha: " for="idSenha"/>
-                        <h:inputSecret value="#{usuarioMB.usuario.senha}" id="idSenha"/>
-                        <h:commandButton value="Login" action="#{usuarioMB.verificaLogin()}" />
+                        <h:inputSecret value="#{loginMB.senha}" id="idSenha"/>
+                        <h:commandButton value="Login" action="#{loginMB.verificaLogin()}" />
                     </h:panelGrid>
                     <h:messages id="idMensagem" showDetail="true" errorClass="mensagem"/>
                 </h:form>
