@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 import model.Marca;
 
@@ -16,7 +17,7 @@ import model.Marca;
  *
  * @author gserafini
  */
-@Named
+@ManagedBean(eager = true)
 @ApplicationScoped
 public class MarcaMB implements Serializable {
 

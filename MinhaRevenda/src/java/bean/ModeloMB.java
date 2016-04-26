@@ -5,9 +5,10 @@ import model.Modelo;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 
-@Named
+@ManagedBean(eager = true)
 @ApplicationScoped
 public class ModeloMB implements Serializable {
 
@@ -73,4 +74,12 @@ public class ModeloMB implements Serializable {
         listaModelos.remove(modelo);
     }
 
+    public Modelo buscarModelo(int codModelo) {
+        for (Modelo modelo : listaModelos) {
+            if (modelo.getCodigo() == (codModelo)) {
+                return modelo;
+            }
+        }
+        return null;
+    }
 }
