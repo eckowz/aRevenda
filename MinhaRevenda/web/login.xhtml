@@ -15,8 +15,9 @@
                         <h:inputText value="#{loginMB.login}" id="idUsuario"/>
                         <h:outputLabel value="Senha: " for="idSenha"/>
                         <h:inputSecret value="#{loginMB.senha}" id="idSenha"/>
-                        <h:commandButton value="Login" action="#{loginMB.verificaLogin()}" />
+
                     </h:panelGrid>
+                    <h:commandButton class="button" value="Login" action="#{loginMB.verificaLogin()}" />
                     <h:messages id="idMensagem" showDetail="true" errorClass="mensagem"/>
                 </h:form>
             </ui:define>

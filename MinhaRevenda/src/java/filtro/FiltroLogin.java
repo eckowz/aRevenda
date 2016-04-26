@@ -24,13 +24,16 @@ public class FiltroLogin implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         LoginMB auth = (LoginMB)  req.getSession().getAttribute("loginMB");
         if (auth != null && auth.estaLogado()) {
-            if (auth.eAdmin()) {
-                resp.sendRedirect(req.getContextPath() + "/faces/admin/index.xhtml");
-            } else {
-                resp.sendRedirect(req.getContextPath() + "/faces/comum/index.xhtml");
-            }
+            //Direciona o usuario para o logout se ele ja estiver logado.
+            resp.sendRedirect(req.getContextPath() + "/faces/logout.xhtml");
+//            if (auth.eAdmin()) {
+//                resp.sendRedirect(req.getContextPath() + "/faces/admin/index.xhtml");
+//            } else {
+//                resp.sendRedirect(req.getContextPath() + "/faces/comum/index.xhtml");
+//            }
         } else {
             chain.doFilter(request, response);
+
         }
     }
 
