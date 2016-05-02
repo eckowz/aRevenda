@@ -63,4 +63,12 @@ public class VeiculoMB implements Serializable {
         listaVeiculos.remove(veiculo);
     }
 
+        public Veiculo buscarVeiculo(int codVeiculo) {
+        for (Veiculo veiculo : listaVeiculos) {
+            if (veiculo.getCodigo() == (codVeiculo)) {
+                return veiculo;
+            }
+        }
+        return null;
+    }
 }

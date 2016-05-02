@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:body>
+        <ui:composition template="/template/template.xhtml">
+            <ui:define name="content">
+                <h:form class="bootstrap-frm">
+                    <h:dataTable styleClass="tabela" headerClass="cabecalho" 
+                                 rowClasses="primeiro, ultimo" var="veiculo" value="#{veiculoMB.listaVeiculos}">
+                        <f:facet name="header">
+                            <h:outputText value="Tabela de Veículos" />
+                        </f:facet>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Código" />
+                            </f:facet>
+                            <h:outputText id="idCodigo" value="#{veiculo.codigo}"  />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Marca" />
+                            </f:facet>
+                            <h:outputText id="idMarca" value="#{veiculo.marca.marca}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Modelo" />
+                            </f:facet>
+                            <h:outputText id="idModelo" value="#{veiculo.modelo.modelo}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Chassi" />
+                            </f:facet>
+                            <h:outputText id="idChassi" value="#{veiculo.chassi}" />
+                        </h:column>
+                        <h:column >
+                            <f:facet name="header">
+                                <h:outputText value="Operação" />
+                            </f:facet>
+                            <h:commandLink class="operacao" value="Editar " action="#{veiculoMB.editarVeiculo(veiculo)}"/>
+                            
+                            <h:commandLink class="operacao" value="Remover" action="#{veiculoMB.removerVeiculo(veiculo)}"/>
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandButton class="button" value="Novo Modelo" action="#{veiculoMB.novoVeiculo()}"/>
+                    <h:button class="button" value="Voltar" outcome="/index"/>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
