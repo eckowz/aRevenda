@@ -1,14 +1,62 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <body>
 
-        <ui:composition template="./../template/template.xhtml">
+        <ui:composition template="/template/template.xhtml">
 
             <ui:define name="content">
-                content
+                <h:form class="bootstrap-frm">
+                    <h:dataTable styleClass="tabela" headerClass="cabecalho" 
+                                 rowClasses="primeiro, ultimo" var="venda" value="#{vendaMB.listaVendas}">
+                        <f:facet name="header">
+                            <h:outputText value="Tabela de Vendas" />
+                        </f:facet>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Código" />
+                            </f:facet>
+                            <h:outputText id="idCodigo" value="#{venda.codigo}"  />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Veiculo-Chassi" />
+                            </f:facet>
+                            <h:outputText id="idChassi" value="#{venda.veiculo.chassi}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Veiculo-Marca" />
+                            </f:facet>
+                            <h:outputText id="idMarca" value="#{venda.veiculo.marca}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Veiculo-Modelo" />
+                            </f:facet>
+                            <h:outputText id="idModelo" value="#{venda.veiculo.modelo}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Cliente" />
+                            </f:facet>
+                            <h:outputText id="idCliente" value="#{venda.cliente}" />
+                        </h:column>
+                        <h:column >
+                            <f:facet name="header">
+                                <h:outputText value="Operação" />
+                            </f:facet>
+                            <h:commandLink class="operacao" value="Remover" action="#{vendaMB.removerVenda(venda)}"/>
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandButton class="button" value="Novo Venda" action="#{vendaMB.novoVenda()}"/>
+                    <h:button class="button" value="Voltar" outcome="/index"/>
+                </h:form>
             </ui:define>
 
         </ui:composition>
